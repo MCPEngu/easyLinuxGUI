@@ -7,7 +7,7 @@ For one who is curious, this tool installs:
 - VNC4Server.
 - Neofetch
 - Vim editor
-- Ungoogled Chromium, Librewolf, Wine staging (optional).
+- Ungoogled Chromium, LibreWolf, Wine-Staging, Liquorix kernel (optional).
 
 # Pre-requitesite
 - This tool only only support Ubuntu 20.04 LTS Focal (other soon)
