@@ -8,11 +8,7 @@ For one who is curious, this tool installs:
 - Ungoogled Chromium, Firefox, Wine staging (optional).
 
 # Pre-requitesite
-- This tool currently supports Debian-based OS only including:
-  - Debian 9
-  - Ubuntu 16.04
-  - Ubuntu 18.04
-  - Ubuntu 20.04
+- This tool only only support Ubuntu 20.04 LTS Focal (other soon)
 - You must have access to root account over SSH connection with password or key (.pem/.ppk - no password).
 
 # Support
