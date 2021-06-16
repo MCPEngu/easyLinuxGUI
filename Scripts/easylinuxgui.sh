@@ -63,10 +63,10 @@ if [ $ff -eq 1 ]; then
     
 fi
 if [ $gc -eq 1 ]; then
-    wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-    echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-    apt-get update
-    apt-get -y install google-chrome-stable
+    echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' | tee /etc/apt/sources.list.d/home-ungoogled_chromium.list > /dev/null
+    curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/Release.key' | gpg --dearmor | tee /etc/apt/trusted.gpg.d/home-ungoogled_chromium.gpg > /dev/null
+    apt update -y
+    apt install -y ungoogled-chromium
 fi
 if [ $wine -eq 1 ]; then
     dpkg --add-architecture i386
