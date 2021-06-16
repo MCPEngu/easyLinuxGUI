@@ -12,7 +12,7 @@ else
     read  vncpw
     echo -e "Do you want to install Firefox browser?(1 = Yes, 0 = No)"
     read ff
-    echo -e "Do you want to install Chrome browser?(1 = Yes, 0 = No)"
+    echo -e "Do you want to install Ungoogled-Chromium browser?(1 = Yes, 0 = No)"
     read gc
     echo -e "Do you want to install Wine-staging to run Windows software?(1 = Yes, 0 = No)"
     read wine
