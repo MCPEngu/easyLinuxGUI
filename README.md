@@ -5,7 +5,9 @@ This tool provides an easy way to install GUI and VNC Server on Linux server. No
 For one who is curious, this tool installs:
 - XFCE4.
 - VNC4Server.
-- Ungoogled Chromium, Firefox, Wine staging (optional).
+- Neofetch
+- Vim editor
+- Ungoogled Chromium, Librewolf, Wine staging (optional).
 
 # Pre-requitesite
 - This tool only only support Ubuntu 20.04 LTS Focal (other soon)
