@@ -3,9 +3,9 @@
 This tool provides an easy way to install GUI and VNC Server on Linux server. No command needed, very noob friendly.
 
 For one who is curious, this tool installs:
-- XFDE4.
+- XFCE4.
 - VNC4Server.
-- Google Chrome, Firefox, Wine latest version (optional).
+- Ungoogled Chromium, Firefox, Wine staging (optional).
 
 # Pre-requitesite
 - This tool currently supports Debian-based OS only including:
