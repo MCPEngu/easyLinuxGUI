@@ -1,7 +1,7 @@
 #!/bin/bash
-#Script by Ngo Anh Tuan-lowendviet.com
-#Change log
-#2018-Sept-17: Initialize script
+#Script by Ngo Anh Tuan-lowendviet.com (Edited by MCPEngu)
+#Changelog
+#2021-June-17: Initialize script
 if [ $# -eq 4 ] ; then
     vncpw=$1
     ff=$2
