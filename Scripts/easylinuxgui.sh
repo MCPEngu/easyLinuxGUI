@@ -14,7 +14,7 @@ else
     read ff
     echo -e "Do you want to install Chrome browser?(1 = Yes, 0 = No)"
     read gc
-    echo -e "Do you want to install Wine to run Windows software?(1 = Yes, 0 = No)"
+    echo -e "Do you want to install Wine-staging to run Windows software?(1 = Yes, 0 = No)"
     read wine
 
     if [ $ff -eq 1 ]; then
@@ -43,7 +43,7 @@ chsh -s /bin/bash vnc
 usermod -aG sudo vnc
 apt-get update -y
 
-INSTALL_PKGS="xfce4 xfce4-goodies gnome-icon-theme sudo vnc4server tigervnc-common zip unzip file-roller gedit xfonts-base dbus-x11"
+INSTALL_PKGS="xfce4 xfce4-goodies gnome-icon-theme sudo vnc4server tigervnc-common zip unzip file-roller gedit xfonts-base neofetch dbus-x11"
 for i in $INSTALL_PKGS; do
   sudo apt-get install -y $i
 done
