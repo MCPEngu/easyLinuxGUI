@@ -12,6 +12,7 @@ For one who is curious, this tool installs:
   - Debian 9
   - Ubuntu 16.04
   - Ubuntu 18.04
+  - Ubuntu 20.04
 - You must have access to root account over SSH connection with password or key (.pem/.ppk - no password).
 
 # Support
