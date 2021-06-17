@@ -9,6 +9,7 @@ For one who is curious, this tool installs:
 - Vim editor
 - Htop
 - Ungoogled Chromium, Iceweasel, Wine-Staging with Winetricks, Liquorix kernel (optional) and more.
+
 You can check it in Script folder.
 
 # Pre-requitesite
