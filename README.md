@@ -10,7 +10,7 @@ For one who is curious, this tool installs:
 - Htop
 - Ungoogled Chromium, Iceweasel, Wine-Staging with Winetricks, Liquorix kernel (optional) and more.
 
-You can check it in Script folder.
+You can check it in Scripts folder.
 
 # Pre-requitesite
 - This tool currently supports Debian-based OS only including:
