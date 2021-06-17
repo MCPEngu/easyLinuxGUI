@@ -11,7 +11,9 @@ For one who is curious, this tool installs:
 - Ungoogled Chromium, LibreWolf, Wine-Staging with Winetricks, Liquorix kernel (optional).
 
 # Pre-requitesite
-- This tool only only support: Ubuntu 20.04 LTS Focal (other soon)
+- This tool currently supports Debian-based OS only including:
+- Ubuntu 20.04 LTS (Focal)
+- Debian 10 Buster 
 - You must have access to root account over SSH connection with password or key (.pem/.ppk - no password).
 
 # Support
