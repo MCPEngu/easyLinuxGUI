@@ -8,7 +8,7 @@ For one who is curious, this tool installs:
 - Neofetch
 - Vim editor
 - Htop
-- Ungoogled Chromium, LibreWolf, Wine-Staging with Winetricks, Liquorix kernel (optional).
+- Ungoogled Chromium, Iceweasel, Wine-Staging with Winetricks, Liquorix kernel (optional).
 
 # Pre-requitesite
 - This tool currently supports Debian-based OS only including:
