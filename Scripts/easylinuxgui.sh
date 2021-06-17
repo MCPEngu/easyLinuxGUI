@@ -85,7 +85,7 @@ if [ $wine -eq 1 ]; then
         apt-add-repository https://dl.winehq.org/wine-builds/debian/
     fi
     apt-get update
-    apt-get -y install --install-recommends winehq-stable winetricks
+    apt-get -y install --install-recommends winehq-staging winetricks
 fi
 #Create & enable service
 
