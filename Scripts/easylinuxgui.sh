@@ -17,7 +17,7 @@ else
     read gc
     echo -e "Do you want to install Wine-staging to run Windows software?(1 = Yes, 0 = No)"
     read wine
-    echo -e "Do you want to install Liquorix Kernel, maybe have better performance(1 = Yes, 0 = No)"
+    echo -e "Do you want to install Liquorix non-LTS latest Kernel, maybe have better performance(1 = Yes, 0 = No)"
     read lqx
 
     if [ $ff -eq 1 ]; then
