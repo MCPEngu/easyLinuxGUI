@@ -12,8 +12,8 @@ For one who is curious, this tool installs:
 
 # Pre-requitesite
 - This tool currently supports Debian-based OS only including:
-- Ubuntu 20.04 LTS (Focal)
-- Debian 10 Buster 
+  - Ubuntu 20.04 LTS (Focal)
+  - Debian 10 Buster 
 - You must have access to root account over SSH connection with password or key (.pem/.ppk - no password).
 
 # Support
