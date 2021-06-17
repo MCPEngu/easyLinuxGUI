@@ -2,20 +2,23 @@
 #Script by Ngo Anh Tuan-lowendviet.com (Edited by MCPEngu)
 #Changelog
 #2021-June-17: Initialize script
-if [ $# -eq 4 ] ; then
+if [ $# -eq 5 ] ; then
     vncpw=$1
     ff=$2
     gc=$3
     wine=$4
+    lqx=$5
 else
     echo -e "Enter password of VNC"
     read  vncpw
-    echo -e "Do you want to install LibreWolf browser?(1 = Yes, 0 = No)"
+    echo -e "Do you want to install Iceweasel browser?(1 = Yes, 0 = No)"
     read ff
     echo -e "Do you want to install Ungoogled-Chromium browser?(1 = Yes, 0 = No)"
     read gc
     echo -e "Do you want to install Wine-staging to run Windows software?(1 = Yes, 0 = No)"
     read wine
+    echo -e "Do you want to install Liquorix Kernel, maybe have better performance(1 = Yes, 0 = No)"
+    read lqx
 
     if [ $ff -eq 1 ]; then
         ff=1
@@ -31,6 +34,11 @@ else
         wine=1
     else
         wine=0
+    fi
+    if [ $lqx -eq 1 ]; then
+        lqx=1
+    else
+        lqx=0
     fi
 fi
 #Get OS
@@ -87,8 +95,19 @@ if [ $wine -eq 1 ]; then
     apt-get update
     apt-get -y install --install-recommends winehq-staging winetricks
 fi
-#Create & enable service
+if [ $lqx -eq 1 ]; then
+    apt-get update -yes
+    if [ "$OS" = "Ubuntu" ]; then
+        add-apt-repository ppa:damentz/liquorix -y
+        apt-get update -y
+    if [ "$OS" = "Debian" ]; then
+        curl 'https://liquorix.net/add-liquorix-repo.sh' | bash
+    fi
+    apt-get update -y
+    apt-get install linux-image-liquorix-amd64 linux-headers-liquorix-amd64 -y
+fi
 
+#Create & enable service
 touch /lib/systemd/system/levvnc@.service || true
 echo "[Unit]" > /lib/systemd/system/levvnc@.service
 echo "Description=Automatic VNC service by https://lowendviet.com" >> /lib/systemd/system/levvnc@.service
