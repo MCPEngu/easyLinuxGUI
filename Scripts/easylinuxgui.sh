@@ -51,7 +51,7 @@ chsh -s /bin/bash vnc
 usermod -aG sudo vnc
 apt-get update -y
 
-INSTALL_PKGS="xfce4 xfce4-goodies gnome-icon-theme sudo vnc4server htop tigervnc-common vim zip unzip unrar file-roller gedit xfonts-base neofetch dbus-x11 git wget build-essential fakeroot libncurses5-dev libssl-dev ccache bison flex qtbase5-dev bc rsync kmod cpio libelf-dev llvm clang lld"
+INSTALL_PKGS="xfce4 xfce4-goodies gnome-icon-theme sudo vnc4server htop tigervnc-common bleachbit vim zip unzip unrar file-roller gedit xfonts-base neofetch dbus-x11 git wget build-essential fakeroot libncurses5-dev libssl-dev ccache bison flex qtbase5-dev bc rsync kmod cpio libelf-dev llvm clang lld"
 for i in $INSTALL_PKGS; do
   sudo apt-get install -y $i
 done
