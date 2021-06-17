@@ -10,7 +10,7 @@ if [ $# -eq 4 ] ; then
 else
     echo -e "Enter password of VNC"
     read  vncpw
-    echo -e "Do you want to install Firefox browser?(1 = Yes, 0 = No)"
+    echo -e "Do you want to install LibreWolf browser?(1 = Yes, 0 = No)"
     read ff
     echo -e "Do you want to install Ungoogled-Chromium browser?(1 = Yes, 0 = No)"
     read gc
@@ -43,7 +43,7 @@ chsh -s /bin/bash vnc
 usermod -aG sudo vnc
 apt-get update -y
 
-INSTALL_PKGS="xfce4 xfce4-goodies gnome-icon-theme sudo vnc4server tigervnc-common vim zip unzip file-roller gedit xfonts-base neofetch dbus-x11"
+INSTALL_PKGS="xfce4 xfce4-goodies gnome-icon-theme sudo vnc4server htop tigervnc-common vim zip unzip file-roller gedit xfonts-base neofetch dbus-x11"
 for i in $INSTALL_PKGS; do
   sudo apt-get install -y $i
 done
@@ -63,8 +63,14 @@ if [ $ff -eq 1 ]; then
     
 fi
 if [ $gc -eq 1 ]; then
-    echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' | tee /etc/apt/sources.list.d/home-ungoogled_chromium.list > /dev/null
-    curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/Release.key' | gpg --dearmor | tee /etc/apt/trusted.gpg.d/home-ungoogled_chromium.gpg > /dev/null
+    apt update -y
+    if [ "$OS" = "Ubuntu" ]; then
+        echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' | tee /etc/apt/sources.list.d/home-ungoogled_chromium.list > /dev/null
+        curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/Release.key' | gpg --dearmor | tee /etc/apt/trusted.gpg.d/home-ungoogled_chromium.gpg > /dev/null
+    elif [ "$OS" = "Debian" ]; then
+        echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Debian_Buster/ /' | sudo tee /etc/apt/sources.list.d/home-ungoogled_chromium.list > /dev/null
+        curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Debian_Buster/Release.key' | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home-ungoogled_chromium.gpg > /dev/null
+    fi
     apt update -y
     apt install -y ungoogled-chromium
 fi
