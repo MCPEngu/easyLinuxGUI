@@ -99,7 +99,6 @@ if [ $lqx -eq 1 ]; then
     apt-get update -yes
     if [ "$OS" = "Ubuntu" ]; then
         add-apt-repository ppa:damentz/liquorix -y
-        apt-get update -y
     if [ "$OS" = "Debian" ]; then
         curl 'https://liquorix.net/add-liquorix-repo.sh' | bash
     fi
